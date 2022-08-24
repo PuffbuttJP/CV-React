@@ -8,7 +8,7 @@ const Menu = () => {
     <a  href="#">Professional</a>
     <a  href="#">Academic</a>
     <a  href="#">Personal</a>
-     </div>
+    </div>
   )
 }
 

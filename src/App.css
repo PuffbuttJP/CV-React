@@ -1,4 +1,5 @@
 .header {
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -10,12 +11,6 @@
   width: 100%;
   background-color: var(--secondary-color);
   border-bottom: black solid 0.4px;
-}
-
-.header img {
-  position: absolute;
-  opacity: 0.5;
-  height: 140px;
 }
 
 .header h1 {
@@ -33,8 +28,11 @@
 }
 
 .menu {
+  position: fixed;
   display: flex;
   flex-direction: row;
+  padding-top: 142px;
+  width: 100%;
 }
 
 .menu a {
@@ -49,10 +47,22 @@
   color: var(--tertiary-color);
 }
 
+.maxmenu {
+    display: none;
+}
+
 h3 {
   margin: 0;
   text-decoration: underline;
   font-size: 40px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary-color)
 }
 
 .divider {
@@ -61,15 +71,6 @@ h3 {
   background: var(--secondary-color);
   border: black solid 0.5px;
   border-radius: 20px;
-}
-
-.home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 3vw;
-    font-size: 24px;
-    font-weight: bold;
 }
 
 .home h3 {
@@ -81,19 +82,48 @@ h3 {
 }
 
 .professional, .academic, .personal {
-  /*display: none;*/
-  flex-direction: column;
-  padding-left: 3vw;
-  padding-bottom: 50px;
+  /*display: none*/
+  display: flex;
+  z-index: 1;
   background: var(--tertiary-color);
-  overflow-wrap: break-word;
-  font-size: 24px;
-  font-weight: bold;
+  flex-direction: column;
+  padding: 40px 20px 50px 20px;
+  color: var(--primary-color);
+  font-size: 22px;
 }
 
-.prof h4, .acad ul {
+.professional h4, .academic h4{
   margin: 0;
   padding: 0;
+}
+
+.professional h3, .academic h3 {
+  padding-bottom: 25px;
+}
+
+.academic ul {
+  padding-bottom: 20px;
+}
+
+.personal h3 {
+  padding-bottom: 50px;
+}
+
+.personal img {
+  margin-right: auto;
+  margin-left: auto;
+  height: 10%;
+  width: 10%;
+}
+
+.image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.image img {
+  opacity: 0.5;
 }
 
 .contact {
@@ -123,31 +153,59 @@ h3 {
   color: inherit;
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
 
-  body {
-    background-image: url("./components/img/Dude.png");
+  .menu, .contact {
+    visibility: hidden;
   }
 
-  .menu {
+  .maxmenu {
+    background-color: black;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: left;
+    height: 100%;
+    width: 180px;
+  }
+  .maxmenu ul {
+    margin-top: 200px;
   }
 
-  .menu a {
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: solid;
-    padding: 5px;
-    color: var(--tertiary-color);
+  .maxmenu ul > li {
+    list-style: none;
+    padding-top: 30px;
   }
 
+  .maxmenu ul > li > a {
+    text-decoration: none;
+    color: #ffff;
+    font-family: Verdana;
+    font-size: 1.3rem;
+  }
+
+  .maxcontact {
+    color: #ffff;
+    font-family: Verdana;
+    font-size: 1.3rem;
+  }
+  
   .professional, .academic, .personal {
-    background-image: none;
+    margin-left: 180px;
   }
+
+  .image {
+    z-index: 0;
+    position: fixed;
+    right: 240px;
+  }
+
+  .image img {
+    opacity: 0.2;
+    height: 200%;
+    width: 200%;
+  }
+
 }
