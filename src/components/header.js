@@ -1,5 +1,3 @@
-import Dude from './img/Dude.png'
-
 const Header = () => {
     return (
         <div className='header'>

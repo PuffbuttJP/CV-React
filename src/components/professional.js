@@ -12,8 +12,8 @@ const Professional = () => {
             <h4>G4S Utility Services - Administrative Assistant</h4>
                 <p>Aug 2012 - Aug 2016</p>
                 <ul>
-                    <li>Assisted field engineers with managing their workload and addressing emergency outages across the country. </li>
-                    <li>Helped plan and attended bootcamp for outsourcing clients to help them better understand our processes and to collect feedback.</li>
+                        <li>Assisted field engineers with managing their workload and addressing emergency outages across the country. </li>
+                        <li>Helped plan and attended bootcamp for outsourcing clients to help them better understand our processes and to collect feedback.</li>
                     <li>Ran and adapted basic SQL queries, according to a internally-managed framework.</li>
                 </ul>
             <h4>Newcastle Law Centre - Legal Secretary</h4>
